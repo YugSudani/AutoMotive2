@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automotive-login</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        body{
+            background-color: rgb(205, 201, 201);
+        }
+       
+     
+      
+        /* --------------------------------------- */
+        body::-webkit-scrollbar{
+        display: none;
+       }
+        .container{
+            margin:0;
+        }
+        .row{
+            width: 1536px;
+        }
+       .col{
+          border: px solid black;
+       }
+       button{
+        height: 30px;
+        width: 150px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom:2px;
+        margin-top: 2px;
+        background-color: rgb(234, 192, 78);
+       }
+       a{
+        text-decoration: none;
+        color: aliceblue;
+       }
+       .dark{
+           background-color: rgb(40, 40, 40);
+           color: aliceblue;
+       }
+     
+       #img_in_cart{
+             height: 180px;
+             width: 180px;
+             padding: 10px;
+             border-radius: 30px;
+       }   
+
+       #remove_prd_btn{
+        margin-left: 15px;
+       }
+
+       .prd_con{
+        height: 440px;
+        width: 1450px;
+          display: flex;
+          align-items:center;
+          justify-content: center;
+       }
+
+       .footer_column{
+        position: fixed;
+        bottom: 80px;
+       }
+       .checkout_btn{
+        position: fixed;
+        bottom: 30px;
+       }
+
+       input{
+         width:40px;
+         margin-left:30px; 
+         border: none;
+         outline: none;
+         border-radius: 5px;
+         
+       }
+       
+    </style>
+</head>
+ <body onload="Load_cart_prd('IMGS/cheses-2.jpg')" id="body_cart"> 
+
+    <div class="container">
+
+        <div class="row " style="height: 30px; background-color:rgb(28, 26, 26); color:rgb(246, 180, 100);">
+            <div class="col col-md-4 text-center"><h6 style="margin-top: 2px;">| Auto-Motive-Sellers |</h6></div>
+            <div class="col col-md-4 text-center "><h6 style="margin-top:2px;">| HEVEN OF AUTOMOTIVE ACCESSORIES |</h6></div>
+            <div class="col col-md-4 text-center "><h6 style="margin-top:2PX;">| CONSTRUCT YOUR OWN MACHINE |</h6></div>
+
+        </div>
+
+        <div class="row header" style="height: 45px; background-image: linear-gradient(rgb(75, 69, 69),rgb(28, 26, 26)); color: azure; font-weight: 600; font-size:18px; "  >
+           
+            <div class="col col-2 "><div style="margin-top:7px;"><a href="index.html" style=" color: rgb(237, 152, 40);">Go to Home ></a></div></div>
+            <div class="col col-4 "></div>
+            <div class="col col-3"></div>
+            <div class="col col-1 "><div style="margin-top:7px;"><a  href="login.html" style=" color: aliceblue; font-size:small"><img src="IMGS/acc-removebg-preview.png" height="30px"; width="50px">Account</a></div></div>
+            <div class="col col-1 d-flex justify-content-center">
+                <div class="form-check form-switch d-flex align-items-center " style="font-size: small;" >
+                    <input class="form-check-input " type="checkbox" id="toggle_mode" onchange="toggle_mode_func('body_cart')" style=" cursor: pointer; height: 22px; width: 40px; margin-right: 9px;">Mode
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+
+<div class="container" id="cart" >     
+
+    <div class="row mt-5" >
+        <div class="col-12" style="background-color: rgb(232, 190, 111);"><h2 style="margin-left: 20px;">_______ __<img src="IMGS/cart-2.png" height="50px" width="90px" alt="crt">__ ______</h2></div>
+    </div>
+
+
+
+    <!-- <input type="text" id="prd_con" > -->
+
+
+    <div class="prd_con" >
+
+
+    </div>
+
+    
+
+    <div class="footer_column  row mt-5 text-center">
+        <div class="col-12 " style="background-color: rgb(81, 77, 77);"><h4 style=" font-weight: 600; color: rgb(193, 210, 210); font-family:Verdana, Geneva, Tahoma, sans-serif; ">Net Total : <label id="cart_prd_net_price_label">9999</label> RS </h4></div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="checkout_btn col-12 text-center"><button  onclick="Payment_page()" style="width: 400px; height: 40px;">Checkout</button></div>
+    </div>
+
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+            
+
+       
+
+
+    <script>
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
